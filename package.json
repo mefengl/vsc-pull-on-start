@@ -1,24 +1,13 @@
 {
+  "publisher": "mefengl",
   "name": "pull-on-start",
   "displayName": "Pull on Start",
-  "description": "Run git pull when start vscode",
   "version": "0.0.1",
-  "engines": {
-    "vscode": "^1.84.0"
-  },
-  "publisher": "mefengl",
   "private": true,
+  "description": "Run git pull when start vscode",
   "author": "mefengl",
   "license": "MIT",
   "repository": "https://github.com/mefengl/vsc-pull-on-start",
-  "categories": [
-    "Other",
-    "SCM Providers"
-  ],
-  "activationEvents": [
-    "onStartupFinished"
-  ],
-  "main": "./extension.js",
   "keywords": [
     "vscode",
     "extension",
@@ -28,14 +17,39 @@
     "automation",
     "repository"
   ],
+  "categories": [
+    "Other",
+    "SCM Providers"
+  ],
+  "main": "./extension.js",
+  "icon": "res/icon.png",
+  "engines": {
+    "vscode": "^1.84.0"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "Pull on Start",
+      "properties": {
+        "pullOnStart.silence": {
+          "type": "boolean",
+          "default": true,
+          "description": "Silence informational messages (errors will still be shown)."
+        }
+      }
+    }
+  },
   "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
-    "@types/vscode": "^1.84.0",
-    "@types/glob": "^8.1.0",
+    "@antfu/eslint-config": "^1.1.1",
     "@types/node": "20.2.5",
-    "eslint": "^8.41.0",
-    "glob": "^8.1.0",
-    "typescript": "^5.1.3"
+    "@types/vscode": "^1.84.0",
+    "eslint": "^8.53.0"
   }
 }
