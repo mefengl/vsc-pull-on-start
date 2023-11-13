@@ -6,17 +6,28 @@
   "engines": {
     "vscode": "^1.84.0"
   },
+  "publisher": "mefengl",
+  "private": true,
+  "author": "mefengl",
+  "license": "MIT",
+  "repository": "https://github.com/mefengl/vsc-pull-on-start",
   "categories": [
-    "Other"
+    "Other",
+    "SCM Providers"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./extension.js",
-  "contributes": {
-    "commands": [{
-      "command": "pull-on-start.helloWorld",
-      "title": "Hello World"
-    }]
-  },
+  "keywords": [
+    "vscode",
+    "extension",
+    "git",
+    "pull",
+    "startup",
+    "automation",
+    "repository"
+  ],
   "scripts": {
   },
   "devDependencies": {
@@ -25,7 +36,6 @@
     "@types/node": "20.2.5",
     "eslint": "^8.41.0",
     "glob": "^8.1.0",
-    "typescript": "^5.1.3",
-    "@vscode/test-electron": "^2.3.2"
+    "typescript": "^5.1.3"
   }
 }
