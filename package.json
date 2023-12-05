@@ -2,7 +2,7 @@
   "publisher": "mefengl",
   "name": "pull-on-start",
   "displayName": "Pull on Start",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": true,
   "description": "Run git pull when start vscode",
   "author": "mefengl",
